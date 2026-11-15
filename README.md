@@ -17,13 +17,14 @@ Customer success teams often track at-risk accounts in a shared sheet that grows
 
 ## What I built
 
-A workbook with four tabs.
+A workbook with five tabs.
 
 | Tab | Purpose |
 | :--- | :--- |
-| Dashboard | KPI cards, top 5 accounts at risk, weekly view and charts. Two selectors (week and CSM) filter everything. |
+| Dashboard | Six KPI tiles, a one-line key insight, five charts and the top 5 accounts at risk with a next action for each. Two selectors (week and CSM) filter everything. |
 | Risk Tracker | The data. One row per account update, with dropdowns for CSM, theme, reason and health. |
 | Churned Accounts | Lists churned and predicted-churn accounts on its own, with total MRR. |
+| Chart Data | Small helper tables that feed the charts. They fill themselves. |
 | Lists | Dropdown values, plus a setting that decides which themes count as at risk. |
 
 A Read Me tab explains the rules inside the file.
@@ -47,7 +48,9 @@ A Read Me tab explains the rules inside the file.
 | Predicted churn | At-risk accounts with the theme Predicted Churn, with their MRR |
 | Moved out of risk | Accounts whose latest row is Moved Out of Risk |
 | Churned | Accounts whose latest row is Churned |
-| Weekly view | The same measures for W1 to W4, plus MRR change versus the previous week |
+| MRR change vs last week | MRR at risk for the selected week minus the week before, shown with an up or down arrow |
+| Key insight | A sentence built by formula: whether MRR at risk rose or fell, and the biggest cause |
+| Charts | MRR trend (line), account movement by week (columns), causes of risk sorted by MRR (bar), health mix (doughnut), MRR by CSM (columns) |
 
 ## What the dummy data shows
 
@@ -55,7 +58,7 @@ The sample has 40 accounts, 85 updates and 4 weeks. By week 4, MRR at risk falls
 
 ## Skills shown
 
-- Excel: SUMIFS, COUNTIFS, INDEX/MATCH, LARGE, IFERROR, helper columns, data validation, conditional number formats, charts
+- Excel: SUMIFS, COUNTIFS, INDEX/MATCH, LARGE, IFERROR, helper columns, data validation, conditional formatting, data bars, line, column, bar and doughnut charts
 - Business analytics: defining KPIs, retention and churn tracking, weekly trend reporting
 - Root cause analysis: structured themes and reason categories so risk can be grouped and compared
 - Process optimization: one data-entry pattern, dropdowns to reduce typing errors, no manual refresh
